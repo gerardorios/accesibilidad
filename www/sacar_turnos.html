@@ -1,139 +1,113 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Sacar turno</title>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            
-            <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
-            <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css" />
-            <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-
-            <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
-            <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>  
-            <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-</head>
-
-<header class="banner" role="banner">
-  <div class="container">
-    <div class="row">
-       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">         
-         <img src="he_head.PNG" class="img-rounded" alt="Banner Hospital Español"/>
-       </div>
-    </div>
-  </div>
-</header>
-
-<nav class="navbar navbar-default" role="navigation">
-  <div class="collapse navbar-collapse navbar-ex1-collapse">
-    <ul class="nav navbar-nav">
-      <li class="active">
-        <a href="sacar_turnos.html">Institución</a>
-      </li>
-
-      <li class="active">
-        <a href="sacar_turnos.html">Horarios profesionales</a>
-      </li>
-
-      <li class="active">
-        <a href="sacar_turnos.html">Reserva de turnos</a>
-      </li>
-
-      <li class="active">
-        <a href="sacar_turnos.html">Contacto</a>
-      </li>
-
-      <li class="active">
-        <a href="login.html">Salir</a>
-      </li>
-    </ul>
-
-  </div>
-</nav>
-
-<form role="form" class="form-horizontal" action="confirmacion_turno.html">
-
-<!--agregar sh ref q es invisible pero visible para los lectores-->
-<div class="table-responsive">
-<table class="table">
-  <caption>Día y horario que atiende cada profesional de acuerdo a la especialidad.</caption>
-  <thead>
-        <tr>
-            <th title="Numero de fila">#</th>
-            <th title="Nombre del médico">Profesional</th>
-            <th title="Día que atiende el médico">Atiende el día</th>
-            <th title="Horario que atiende el médico">En el horario</th>
-            <th title="Casilla para seleccionar la fila">Selecionar</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>Juan Rifourcat</td>
-            <td>Martes y Jueves</td>
-            <td>8 a 10</td>
-            <td>
-              <div class="radio">
-                  <input type="radio" name="opcion 1" id="opcion_1" value="opcion 1" title="opcion 1">
-              </div>
-            </td>
-        </tr>
-
-        <tr>
-            <td>2</td>
-            <td>Nerina Alabart</td>
-            <td>Lunes a Viernes</td>
-            <td>8 a 12</td>
-            <td>
-              <div class="radio">
-                  <input type="radio" name="opcion 2" id="opcion_2" value="opcion 2" title="opcion 2">
-              </div></td>
-        </tr>
-
-        <tr>
-            <td>3</td>
-            <td>Daniel Desagastizabal</td>
-            <td>Lunes y Jueves</td>
-            <td>13 a 18</td>
-            <td>
-              <div class="radio">
-                  <input type="radio" name="opciones" id="opcion_3" value="opcion 3" title="opcion 3">
-              </div></td>
-        </tr>
-
-        <tr>
-            <td>4</td>
-            <td>Martin Carlos Luquez</td>
-            <td>Miércoles</td>
-            <td>15 a 18</td>
-            <td>
-              <div class="radio">
-                  <input type="radio" name="opcion 4" id="opcion_4" value="opcion 4" title="opcion 4">
-              </div></td>
-        </tr>
-
-        <tr>
-            <td>5</td>
-            <td>Camila Cecilia Aimar</td>
-            <td>Viernes</td>
-            <td>18 a 20</td>
-            <td>
-              <div class="radio">
-                  <input type="radio" name="opcion 5" id="opcion_5" value="opcion 5" title="opcion 5">
-              </div></td>
-        </tr>
-    </tbody>
-</table>
-</div>
-    
-    <div class=" col-lg-10">
-      <button type="submit" class="btn btn-default" name="Seleccionar turno" id="seleccionar_turno">Seleccionar turno</button>
-    </div>
-  
-</form>
-  
-</body>
+<html lang="en"> 
+ <head> 
+  <title>Sacar turno</title> 
+  <meta charset="UTF-8"> 
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" /> 
+     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css" /> 
+     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" /> 
+     <script src="http://code.jquery.com/jquery-1.9.1.js"></script> 
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script> 
+     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
+    </meta>
+   </meta>
+  </meta>
+ </head> 
+ <header class="banner" role="banner"> 
+  <div class="container"> 
+   <div class="row"> 
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+     <img src="he_head.PNG" class="img-rounded" alt="Banner Hospital Español" title="Banner Hospital Español"/> 
+    </div> 
+   </div> 
+  </div> 
+ </header> 
+ <nav class="navbar navbar-default" role="navigation"> 
+  <div class="collapse navbar-collapse navbar-ex1-collapse"> 
+   <ul class="nav navbar-nav"> 
+    <li class="active"> <a href="">Institución</a> </li> 
+    <li class="active"> <a href="">Horarios profesionales</a> </li> 
+    <li class="active"> <a href="sacar_turnos.html">Reserva de turnos</a> </li> 
+    <li class="active"> <a href="">Contacto</a> </li> 
+    <li class="active"> <a href="login.html">Salir</a> </li> 
+   </ul> 
+  </div> 
+ </nav> 
+ <form role="form" class="form-horizontal" action="confirmacion_turno.html"> 
+  <!--agregar sh ref q es invisible pero visible para los lectores--> 
+  <div class="table-responsive"> 
+   <table class="table" title="Día y horario que atiende cada profesional de acuerdo a la especialidad." summary="Tabla con atributo summary"> 
+    <caption title="medico día y horario">
+     Día y horario que atiende cada profesional de acuerdo a la especialidad.
+    </caption> 
+    <thead> 
+     <tr> 
+      <th title="Numero de fila" id="Numero">#</th> 
+      <th title="Nombre del médico" id="Profesional">Profesional</th> 
+      <th title="Día que atiende el médico" id="Atiende el día">Atiende el día</th> 
+      <th title="Horario que atiende el médico" id="En el horario">En el horario</th> 
+      <th title="Casilla para seleccionar la fila" id="Selecionar">Selecionar</th> 
+     </tr> 
+    </thead> 
+    <tbody> 
+     <tr> 
+      <td headers="Numero de fila">1</td> 
+      <td headers="Profesional">Juan Rifourcat</td> 
+      <td headers="Atiende el día">Martes y Jueves</td> 
+      <td headers="En el horario">8 a 10</td> 
+      <td headers="Selecionar"> 
+       <div class="radio"> 
+        <input type="radio" name="opcion 1" id="opcion_1" value="opcion 1" title="opcion 1"> </input>
+       </div> </td> 
+     </tr> 
+     <tr> 
+      <td headers="Numero">2</td> 
+      <td headers="Profesional">Nerina Alabart</td> 
+      <td headers="Atiende el día">Lunes a Viernes</td> 
+      <td headers="En el horario">8 a 12</td> 
+      <td headers="Selecionar"> 
+       <div class="radio"> 
+        <input type="radio" name="opcion 2" id="opcion_2" value="opcion 2" title="opcion 2"> </input>
+       </div></td> 
+     </tr> 
+     <tr> 
+      <td headers="Numero">3</td> 
+      <td headers="Profesional">Daniel Desagastizabal</td> 
+      <td headers="Atiende el día">Lunes y Jueves</td> 
+      <td headers="En el horario">13 a 18</td> 
+      <td headers="Selecionar"> 
+       <div class="radio"> 
+        <input type="radio" name="opciones" id="opcion_3" value="opcion 3" title="opcion 3"> </input>
+       </div></td> 
+     </tr> 
+     <tr> 
+      <td headers="Numero">4</td> 
+      <td headers="Profesional">Martin Carlos Luquez</td> 
+      <td headers="Atiende el día">Miércoles</td> 
+      <td headers="En el horario">15 a 18</td> 
+      <td headers="Selecionar"> 
+       <div class="radio"> 
+        <input type="radio" name="opcion 4" id="opcion_4" value="opcion 4" title="opcion 4"> </input>
+       </div></td> 
+     </tr> 
+     <tr> 
+      <td headers="Numero">5</td> 
+      <td headers="Profesional">Camila Cecilia Aimar</td> 
+      <td headers="Atiende el día">Viernes</td> 
+      <td headers="En el horario">18 a 20</td> 
+      <td headers="Selecionar"> 
+       <div class="radio"> 
+        <input type="radio" name="opcion 5" id="opcion_5" value="opcion 5" title="opcion 5"> </input>
+       </div></td> 
+     </tr> 
+    </tbody> 
+   </table> 
+  </div> 
+  <div class=" col-lg-10"> 
+   <button type="submit" class="btn btn-default" name="Seleccionar turno" id="seleccionar_turno" title="Boton para seleccionar el turno">Seleccionar turno</button> 
+  </div> 
+ </form>  
 </html>
