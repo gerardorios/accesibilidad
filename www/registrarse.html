@@ -1,64 +1,113 @@
 <!DOCTYPE html>
 <html>
-    <head>        
+<head>
+    <meta charset="UTF-8">
+    <title>Sacar turno</title>
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1">
             
-
-          <!-- <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
-       
-
-           <!--<script src="../bootstrap/js/bootstrap.js"></script> 
-            <script src="../bootstrap/js/bootstrap.min.js"></script>  
-            
-            <script src="http://code.jquery.com/jquery-1.9.1.js"></script>  -->
-
             <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
-			<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css" />
-			<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+            <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css" />
+            <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 
-			<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+            <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-			<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>	
-			<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+            <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>  
+            <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+</head>
+
+<header class="banner" role="banner">
+  <div class="container">
+    <div class="row">
+       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
          
-            
-                 
-    </head>
+         <img src="he_head.PNG" alt="he" class="img-rounded">
+       </div>
+    </div>
+  </div>
+</header>
 
 <body>
 
-	<form method="POST" class="form-inline" action="">
+    <h3>Formulario de Alta de Usuario</h3>
 
+	<form method="POST" class="form-horizontal" action="registrarse.html" role="form" onsubmit="return validar();">       
 		<fieldset>
     		<legend>Datos Personales</legend>
-    		<label for="nombreCompleto" accesskey="n" class="col-sm-2 control-label">Nombre Completo</label>
-    		<div class="col-sm-10">
-    			<input type="text" name="nombreCompleto" class="form-control" value="" autofocus required>
-    			<span id="helpBlock" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
-    		</div>	
+
+            <div class="form-group">
+    		  <label for="nombre" accesskey="n" class="col-sm-2 control-label">* Nombre:</label>
+                <div class="col-sm-5">
+    			     <input id="nombre" type="text" name="nombre" class="form-control" value="" required>
+                     
+    		    </div>	
+            </div>
     	
-    		<label for="lapellido" accesskey="a" class="col-sm-2 control-label">Apellido</label>
-    		<div class="col-sm-10">
-    			<input type="text" name="realizacionencuesta" class="form-control" value="" >
-    		</div>
+            <div class="form-group">
+    		  <label for="apellido" accesskey="a" class="col-sm-2 control-label">* Apellido:</label>
+    		  <div class="col-sm-5">
+    			 <input id="apellido" type="text" name="apellido" class="form-control" value="" required>
+    		  </div>
+            </div>
+            
+            <div class="form-group">  
+    		  <label for="dni" accesskey="d" class="col-sm-2 control-label">* DNI:</label>
+    		  <div class="col-sm-5">
+    			 <input id="dni" type="text" name="dni" class="form-control" value="" required>
+    		  </div>
+            </div>
+              
+            <div class="form-group">   
+    		  <label for="email" accesskey="e" class="col-sm-2 control-label">* Email:</label>
+    		  <div class="col-sm-5">
+    			 <input type="text" name="email" class="form-control" value="" required>
+    		  </div>
+            </div>  
 
-    		<label for="ldni" accesskey="d" class="col-sm-2 control-label">DNI</label>
-    		<div class="col-sm-10">
-    			<input type="text" name="norespuesta" class="form-control" value="" >
-    		</div>
-
-    		<label for="lemail" accesskey="e" class="col-sm-2 control-label">Email</label>
-    		<div class="col-sm-10">
-    			<input type="text" name="respondente" class="form-control" value="" >
-    		</div>
+             <div class="form-group">
+                <label for="localidad" accesskey="l" class="col-sm-2 control-label">Localidad:</label>
+                <div class="col-sm-5">
+                    <select id="localidad" class="form-control" name="select" required>
+                        <option value="0">Seleccionar</option>
+                        <option value="1">La Plata</option>
+                        <option value="2">City Bell</option>
+                        <option value="3">Villa Elisa</option>
+                        <option value="4">Berisso</option>
+                        <option value="5">Ensenada</option>
+                        <option value="6">Florencio Varela</option>
+                        <option value="7">Chascomus</option>
+                        <option value="8">Punta Lara</option>
+                        <option value="9">Magdalena</option>
+                        <option value="10">Capital Federal</option>
+                        <option value="11">Quilmes</option>
+                    </select>
+                </div>   
+            </div>        
 
     	</fieldset>
 
+        <fieldset>
+            <legend>Obra Social</legend>
+            <div class="radio">
+            <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                Sí
+            </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+   No
+  </label>
+</div>
+
+        </fieldset>
+
     	<div class="col-sm-offset-2 col-sm-10">
-    		<input type="submit" value="Guardar" id="Enviar" name="Enviar" class="btn btn-default">
+    		<input type="submit" value="Registrarme" id="registro" name="registro" class="btn btn-default">
+            <input type="button" value="Borrar Todo" id="borrar" name="borrar" class="btn btn-default">
 		</div>
 	</form>
 

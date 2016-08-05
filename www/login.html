@@ -38,38 +38,44 @@
 </header>
 <body>
 
-<legend>Ingreso al sitio</legend>
+<h3>Ingreso al sitio</h3>
 
-<form role="form" class="form-horizontal" action="sacar_turnos.html">
+  <form role="form" class="form-horizontal" action="sacar_turnos.html" onsubmit="return validar();">       
+    <fieldset>
+        
 
   <div class="form-group">
-    <label for="usuario" class="col-lg-2 control-label">Nombre de usuario</label>
+    <label for="usuario" class="col-lg-2 control-label">* Nombre de usuario</label>
     <div class="col-lg-5">
-      <input type="text" class="form-control" id="usuario" placeholder="Ingresar su nombre se usuario">
+      <input type="text" class="form-control" id="usuario" placeholder="Ingresar su nombre se usuario" required>
         <span id="helpBlock" class="help-block">
             En este campo debe ingresar su nombre de usuario.
         </span>
     </div>
   </div>
 
-  <div class="form-group">
-    <label for="contrasenia" class="col-lg-2 control-label">Contraseña</label>
+    <div class="form-group">
+    <label for="contrasenia" class="col-lg-2 control-label">* Contraseña</label>
     <div class="col-lg-5">
-      <input type="password" class="form-control" id="contrasenia" placeholder="Ingresar su contraseña">
+      <input type="password" class="form-control" id="contrasenia" placeholder="Ingresar su contraseña" required>
         <span id="helpBlock" class="help-block">
             En este campo debe ingresar su contraseña.
         </span>
     </div>
   </div>
+      
 
-
-    <div class="form-group">
+  <div class="form-group">
     <div class="col-lg-offset-2 col-lg-10">
       <button type="submit" class="btn btn-default">Entrar</button>
+      
     </div>
   </div>
 
-</form>
+  </fieldset>
+  </form>
 
+  <a href="registrarse.html" type="button">Registrarse</button>
+  
 </body>
 </html>
